@@ -1,0 +1,55 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow"  WindowStartupLocation="CenterOwner" Height="871" Width="1444">
+    <Grid Margin="0,0,10,43">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="235*"/>
+            <ColumnDefinition Width="1205*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="11*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="bWeatherForecast"  
+                HorizontalAlignment="Left" 
+                Margin="138,19,0,0" 
+                VerticalAlignment="Top" 
+                Width="259" 
+                Height="102" 
+                Click="bWeatherForecast_Click"
+                Content="Subscribe to the &#xa;weather forecast"
+                FontSize="21"
+                FontFamily="Palatino Linotype" Background="#FF19466B" Grid.ColumnSpan="2"/>
+        <Button x:Name="bExchangeRates" 
+                Content="Subscribe to the &#xa;  exchange rates" 
+                HorizontalAlignment="Left" 
+                Margin="374,16,0,0" 
+                VerticalAlignment="Top" 
+                Width="289" 
+                Height="102" 
+                Click="bExchangeRates_Click"                           
+                FontSize="21"
+                FontFamily="Palatino Linotype" Grid.Column="1" Background="#FF19466B"/>
+        <Button x:Name="bStockPrices" 
+                Content="Subscribe to the &#xa;    stock prices" 
+                HorizontalAlignment="Left" 
+                Margin="849,10,0,0" 
+                VerticalAlignment="Top" 
+                Width="282" 
+                Height="108" 
+                Click="bStockPrices_Click"
+                FontSize="21"
+                FontFamily="Palatino Linotype" Grid.Column="1" Background="#FF19466B"/>
+        <Label  x:Name="lbData" Foreground="Black" Content="" Margin="47,175,866,111" Background="#FF28515C" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label  x:Name="lbRate" Foreground="Black" Content="" Margin="406,157,536,28" Background="#FF28515C" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label  x:Name="lbStock" Foreground="Black" Content="" Margin="719,175,10,115" Background="#FF28515C" Grid.RowSpan="2" Grid.Column="1"/>
+
+    </Grid>
+</Window>
